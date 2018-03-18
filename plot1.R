@@ -31,10 +31,10 @@ dataSet <- read.csv2(fileName,
 dataSet <- subset(dataSet, 
                   as.Date(dataSet[,1],"%d/%m/%Y") %in% c(as.Date("2007-02-01"),as.Date("2007-02-02")))
 
-#Print chart to plot window
+# --- Print chart to plot window
 hist(dataSet$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
 
-#Reproduce the plot to PNG device
+# --- Reproduce the plot to PNG device
 png(filename = chartFileName, width=480, height=480)
 hist(dataSet$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
 dev.off()
