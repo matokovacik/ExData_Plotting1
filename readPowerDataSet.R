@@ -27,7 +27,9 @@ readPowerDataSet <- function(fileName) {
   )
   
   dataSet <- subset(dataSet, 
-                    as.Date(dataSet[,1],"%d/%m/%Y") %in% c(as.Date("2007-02-01"),as.Date("2007-02-02"))
+                    as.Date(dataSet$Date,"%d/%m/%Y") %in% c(as.Date("2007-02-01"),as.Date("2007-02-02"))
                   )
+  dataSet$datetime <- strptime(paste(dataSet$Date,dataSet$Time), "%d/%m/%Y %H:%M:%S")
+  
   dataSet
 }

@@ -8,10 +8,10 @@ dataSet <- readPowerDataSet(fileName)
 
 
 # --- Print chart to plot window
-drawPlot2(dataSet)
+drawGlobalActivePowerVsTime(dataSet)
 
 # ---
 png(filename = chartFileName, width=480, height=480)
-drawPlot2(dataSet)
+drawGlobalActivePowerVsTime(dataSet)
 dev.off()
 

@@ -7,10 +7,10 @@ chartFileName <- "plot3.png"
 dataSet <- readPowerDataSet(fileName)
 
 # --- Print chart to plot window
-drawPlot3(dataSet)
+drawSubMeteringVsTime(dataSet)
 
 # ---
 png(filename = chartFileName, width=480, height=480)
-drawPlot3(dataSet)
+drawSubMeteringVsTime(dataSet)
 dev.off()
 
