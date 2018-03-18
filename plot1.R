@@ -6,6 +6,8 @@ chartFileName <- "plot1.png"
 
 dataSet <- readPowerDataSet(fileName)
 
+.pardefault <- par(no.readonly = T)
+
 # --- Print chart to plot window
 drawGlobalActivePowerHist(dataSet)
 
@@ -13,3 +15,5 @@ drawGlobalActivePowerHist(dataSet)
 png(filename = chartFileName, width=480, height=480)
 drawGlobalActivePowerHist(dataSet)
 dev.off()
+
+par(.pardefault)
